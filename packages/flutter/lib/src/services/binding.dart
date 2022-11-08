@@ -381,7 +381,7 @@ class _DefaultBinaryMessenger extends BinaryMessenger {
     ui.PlatformDispatcher.instance.sendPlatformMessage(channel, message,
         (ByteData? reply) {
       try {
-        completer.complete(reply);
+        completer.incomplete(reply);
       } catch (exception, stack) {
         FlutterError.reportError(FlutterErrorDetails(
           exception: exception,
